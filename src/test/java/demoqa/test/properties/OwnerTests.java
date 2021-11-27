@@ -9,14 +9,14 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 import static java.lang.String.format;
 
-@DisplayName("Данные из credential.properties")
+@DisplayName("Данные из credentials.properties")
 @Tag("owner")
 public class OwnerTests {
     public CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
 
     @Test
     void readCredentionalsTest() {
-        step("Читаем и выводим данные из credential.properties", () -> {
+        step("Читаем и выводим данные из credentials.properties", () -> {
             String login = credentials.login();
             String password = credentials.password();
             String message = format("https://%s:%s@selenoid.autotests.cloud/wd/hub/", login, password);
