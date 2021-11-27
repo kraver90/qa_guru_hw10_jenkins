@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 import static java.lang.String.format;
 
 @DisplayName("Данные из credentials.properties")
-@Tag("properties")
+@Tag("owner")
 public class OwnerTests {
     public CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
 
