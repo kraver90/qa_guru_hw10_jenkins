@@ -37,7 +37,7 @@ public class StudentRegistrationFormTest extends TestBase {
                 .typeHobbies("Music")
                 .typeCurrentAddress(testData.address)
                 .typeState("NCR")
-                .typeCity("Noida")
+                .typeCity("Delhi")
                 .submitClick();
         registationPage
                 .checkResultsValue("Student Name", testData.firstName + " " + testData.lastName)
@@ -49,6 +49,6 @@ public class StudentRegistrationFormTest extends TestBase {
                 .checkResultsValue("Hobbies", "Reading, Music")
                 .checkResultsValue("Picture", testData.picture)
                 .checkResultsValue("Address", testData.address)
-                .checkResultsValue("State and City", "NCR Noida");
+                .checkResultsValue("State and City", "NCR Delhi");
     }
 }
