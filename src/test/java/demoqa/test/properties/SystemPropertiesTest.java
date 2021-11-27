@@ -1,19 +1,19 @@
 package demoqa.test.properties;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@DisplayName("Проверяем браузер")
 @Tag("properties")
 public class SystemPropertiesTest {
     @Test
-    void someTest(){
-        String value = System.getProperty("value");
-        System.out.println(value);
-    }
-
-    @Test
-    void someTest1(){
-        String value = System.getProperty("browser", "firefox");
-        System.out.println(value);
+    void propertiesTest() {
+        String browser = System.getProperty("browser", "chrome");
+        String version = System.getProperty("version", "91");
+        String browserSize = System.getProperty("browserSize", "1920x1080");
+        System.out.println(browser);
+        System.out.println(version);
+        System.out.println(browserSize);
     }
 }
