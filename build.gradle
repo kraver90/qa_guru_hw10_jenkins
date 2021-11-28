@@ -72,6 +72,7 @@ task registration_page_tests(type: Test) {
 task all_tests(type: Test) {
     useJUnitPlatform {
         includeTags "properties"
+        includeTags "owner"
         includeTags "registrationPage"
     }
 }
